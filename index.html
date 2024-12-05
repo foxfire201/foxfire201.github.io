@@ -124,6 +124,25 @@
 .bottom-right2 img:hover {
     transform: scale(1.1);
 }
+                .bottom-right3 {
+    position: fixed;
+    bottom: 20px;
+    right: 124px;
+    z-index: 2;
+}
+
+.bottom-right3 img {
+    width: 32px;      /* Set a fixed width */
+    height: 32px;     /* Maintain the aspect ratio */
+    cursor: pointer;
+    border-radius: 50%; /* Make it circular */
+    transition: transform 0.2s ease;
+    object-fit: contain; /* Ensures the image doesn't stretch */
+}
+
+.bottom-right3 img:hover {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -157,7 +176,12 @@
     </div>
     <div class="bottom-right2">
         <a href="https://github.com/foxfire201/foxfire201.github.io/tree/main/scripts" target="_blank">
-            <img src="asset/github-10-32.png" alt="server">
+            <img src="asset/github-10-32.png" alt="github">
+        </a>
+    </div>
+    <div class="bottom-right3">
+        <a href="https://scriptblox.com/u/pp*" target="_blank">
+            <img src="asset/paper-32.png" alt="scriptblox">
         </a>
     </div>
 </body>
