@@ -86,24 +86,25 @@
 
         /* Bottom-right image styling */
         .bottom-right {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 2;
-        }
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
 
-        .bottom-right img {
-            width: 60px; /* Adjust size */
-            height: auto; /* Maintain aspect ratio */
-            cursor: pointer;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease;
-        }
+.bottom-right img {
+    width: 60px;      /* Set a fixed width */
+    height: auto;     /* Maintain the aspect ratio */
+    cursor: pointer;
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    object-fit: contain; /* Ensures the image doesn't stretch */
+}
 
-        .bottom-right img:hover {
-            transform: scale(1.1);
-        }
+.bottom-right img:hover {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
