@@ -3,26 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komaru Hub</title>
+    <title>KOMARU</title>
     <style>
-        p {
-          background-image: url('asset/icom1.png');
-        }
         body {
-            background-size: cover;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            position: relative;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
         }
+
+        /* Background image with overlay */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('asset/icom1.png') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1; /* Place it behind other content */
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+            z-index: 0; /* Layer just above the background */
+        }
+
+        /* Content styling */
+        .content {
+            position: relative;
+            z-index: 1; /* Place content above overlay */
+            padding: 20px;
+        }
+
         h1 {
             margin-top: 100px;
             font-size: 50px;
         }
+
         .buttons-container {
             margin-top: 50px;
         }
+
         .button {
             background-color: #4CAF50;
             border: none;
@@ -37,14 +66,17 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
+
         .button:hover {
             background-color: #45a049;
         }
+
         .agreement {
             margin-top: 50px;
             font-size: 16px;
             color: #f5a623;
         }
+
         .credits {
             margin-top: 30px;
             font-size: 14px;
@@ -53,19 +85,26 @@
     </style>
 </head>
 <body>
-    <h1>KOMARU</h1>
-    <div class="buttons-container">
-        <a href="https://rscripts.net/script/ability-wars-exploit-xuL6" class="button">Ability Wars</a>
-        <a href="https://rscripts.net/script/risky-haul-new-op-script-higg" class="button">Risky Haul</a>
-        <a href="https://rscripts.net/script/word-bomb-auto-typer-gui-hemX" class="button">Word Bomb</a>
-    </div>
+    <!-- Background with overlay -->
+    <div class="background"></div>
+    <div class="overlay"></div>
 
-    <div class="agreement">
-        By using this script, you are aware of the risks. Please use an alternate account.
-    </div>
+    <!-- Main content -->
+    <div class="content">
+        <h1>KOMARU</h1>
+        <div class="buttons-container">
+            <a href="https://rscripts.net/script/ability-wars-exploit-xuL6" class="button">Ability Wars</a>
+            <a href="https://rscripts.net/script/risky-haul-new-op-script-higg" class="button">Risky Haul</a>
+            <a href="https://rscripts.net/script/word-bomb-auto-typer-gui-hemX" class="button">Word Bomb</a>
+        </div>
 
-    <div class="credits">
-        Made by foxfire201 and apnff0x.
+        <div class="agreement">
+            By using this script, you are aware of the risks. Please use an alternate account.
+        </div>
+
+        <div class="credits">
+            Made by foxfire201 and apnff0x.
+        </div>
     </div>
 </body>
 </html>
