@@ -104,6 +104,26 @@
 .bottom-right img:hover {
     transform: scale(1.1);
 }
+
+        .bottom-right2 {
+    position: fixed;
+    bottom: 20px;
+    right: 62px;
+    z-index: 2;
+}
+
+.bottom-right2 img {
+    width: 62px;      /* Set a fixed width */
+    height: 62px;     /* Maintain the aspect ratio */
+    cursor: pointer;
+    border-radius: 50%; /* Make it circular */
+    transition: transform 0.2s ease;
+    object-fit: contain; /* Ensures the image doesn't stretch */
+}
+
+.bottom-right2 img:hover {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -133,6 +153,11 @@
     <div class="bottom-right">
         <a href="https://www.roblox.com" target="_blank">
             <img src="asset/dc.png" alt="server">
+        </a>
+    </div>
+    <div class="bottom-right2">
+        <a href="https://www.github.com/firefox201/foxfire201.github.io/scripts" target="_blank">
+            <img src="asset/git.png" alt="server">
         </a>
     </div>
 </body>
