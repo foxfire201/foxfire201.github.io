@@ -454,7 +454,7 @@ if game.PlaceId == 8260276694 then
     })
     MovementSection:AddSlider({
         Name = "Gravity",
-        Flag = "movement/jpnumber",
+        Flag = "movement/gravity",
         Value = 196.2,
         Precise = 1,
         Min = 0,
