@@ -50,6 +50,9 @@ if game.PlaceId == 8260276694 then
     function functions.Other:Magnitude_Y(pos1, pos2)
         return (pos1 * Vector3.new(0, 1, 0) - pos2 * Vector3.new(0, 1, 0)).Magnitude
     end
+    function functions.Other:Magnitude_XZ(pos1, pos2)
+        return (pos1 * Vector3.new(1, 0, 1) - pos2 * Vector3.new(1, 0, 1)).Magnitude
+    end
     function functions.Other:Mouse1Press()
         if services['UserInputService']:GetFocusedTextBox() ~= nil then return end
 
@@ -84,9 +87,10 @@ if game.PlaceId == 8260276694 then
     end
 
     function functions.Characters:GetEntitys(distance)
-        local ents = {};
+        ents = {};
         for _, p in next, services['Players']:GetPlayers() do
             if not functions.Characters:IsAlive(p) then continue end
+            if p:FindFirstChild('Butter') or (p:FindFirstChild('leaderstats') and p:FindFirstChild('leaderstats'):FindFirstChild('Ability') and p:FindFirstChild('leaderstats'):FindFirstChild('Ability').Value == 'Spectator') then continue end
             if functions.Other:Magnitude(services['Players'].LocalPlayer.Character.HumanoidRootPart.Position, p.Character.HumanoidRootPart.Position) <= distance and p ~= services['Players'].LocalPlayer then
                 table.insert(ents, p.Character)
             end
@@ -212,6 +216,7 @@ if game.PlaceId == 8260276694 then
     CombatSection:AddToggle({
         Name = "Comat Bot 🔨",
         Flag = "combat/bot",
+        Keybind = 1,
         Callback = function(state)
             if state then
                 autoresp:Set(true)
@@ -579,14 +584,15 @@ if game.PlaceId == 8260276694 then
             end
 
             if functions.Characters:IsAlive(services['Players'].LocalPlayer) and flags['combat/bot'] then
-                char = functions.Characters:GetNearEntity(80)
-                if char then
-                    if functions.Other:Magnitude_Y(char.HumanoidRootPart.Position, services['Players'].LocalPlayer.Character.HumanoidRootPart.Position) <= 8 then
-                        services['Players'].LocalPlayer.Character.Humanoid:MoveTo(char.HumanoidRootPart.Position)
+                charx = functions.Characters:GetNearEntity(200)
+                if charx and charx.PrimaryPart then
+                    if not ((charx['Right Arm']:FindFirstChildOfClass('SelectionBox')) and (flags['pvpsettings/nouno'])) then
+                        services['Players'].LocalPlayer.Character.Humanoid:MoveTo(charx.HumanoidRootPart.Position)
+                        services['Players'].LocalPlayer.Character.Humanoid.Jump = true
                     end
                 end
             end
-            wait()
+            wait(0.2)
         end
     end)
 
