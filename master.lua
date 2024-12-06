@@ -2,6 +2,7 @@
     {
       Ability Wars -> 8260276694
       Word Bomb -> 2653064683
+      Risky Haul -> 18421734073
       More Game Coming Soon -> 000000001
     }
 ]]
@@ -9,6 +10,8 @@ if game.PlaceId == 8260276694 then
     loadstring(game:HttpGet'https://foxfire201.github.io/scripts/AbWars')()
 elseif game.PlaceId == 2653064683 then
     loadstring(game:HttpGet'https://foxfire201.github.io/scripts/WordBomb')()
+elseif game.PlaceId == 18421734073 then
+    loadstring(game:HttpGet'https://foxfire201.github.io/scripts/RiskyHauw')()
 end
 
 return(function(a,b)
