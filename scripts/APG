@@ -1,3 +1,5 @@
+ps = {-41, 51, -34} -- positions | change them, if you want to
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -47,12 +49,18 @@ Tab:CreateToggle({
     auto = Value
    end
 })
+Tab:CreateButton({
+   Name = "be ghost",
+   Callback = function()
+    game:GetService("ReplicatedStorage").remoteFunctions.beGhost:InvokeServer()
+   end,
+})
 
 function __main()
     task.spawn(function()
         repeat
             if auto then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5001, 13, 5007)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(ps[1], ps[2], ps[3])
             end
             task.wait()
         until nil
