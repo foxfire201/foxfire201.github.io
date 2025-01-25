@@ -1,3 +1,8 @@
+-- 🔨 = work in progress and to be improved
+-- i believe certain people may be skidding my work uwu
+-- fukck you smhaaa
+-- IF you are a new dev do not paste my work and make ur own script but u can use it for personal thing (TO SMHAAA!
+
 local library, flags = loadstring(game:HttpGet('https://pastebin.com/raw/UD6J9MqK'))();
 local gui = library;
 local empt = function() end
@@ -60,11 +65,11 @@ if game.PlaceId == 8260276694 then
         services['VirtualInputManager']:SendMouseButtonEvent(workspace.CurrentCamera.ViewportSize.X / 2, workspace.CurrentCamera.ViewportSize.Y / 2, 0, false, nil, 0)
     end
     function functions.Other:SendNotification(title, text, duration)
-        return services['StarterGui']:SetCore("SendNotification", {
+        services['StarterGui']:SetCore("SendNotification", {
             Title = title,
             Text = text,
             Duration = duration
-        }) -- dunno why return? it doesnt return anything anyway, its just nice ig
+        })
     end
     function functions.Other:FindUser(sh)
         for i, v in services['Players']:GetPlayers() do
@@ -96,9 +101,9 @@ if game.PlaceId == 8260276694 then
             end
         end
         if #ents > 0 then
-            return (ents);
+            return (ents)
         else
-            return (nil); -- L bozo
+            return (nil)
         end
     end
 
