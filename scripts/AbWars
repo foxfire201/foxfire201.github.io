@@ -2,6 +2,7 @@
 -- i believe certain people may be skidding my work uwu
 -- fukck you smhaaa
 -- IF you are a new dev do not paste my work and make ur own script but u can use it for personal thing (TO SMHAAA!
+-- discord: https://discord.gg/hFCsjYRVJ4
 
 local library, flags = loadstring(game:HttpGet('https://pastebin.com/raw/UD6J9MqK'))();
 local gui = library;
@@ -115,7 +116,7 @@ if game.PlaceId == 8260276694 then
         repeat wait() until p.Character and p.Character.PrimaryPart
         p.Character.HumanoidRootPart.Size = Vector3.new(flags['advantages/extender/amn'], flags['advantages/extender/amn'], flags['advantages/extender/amn'])
     end
-    functions.Other:SendNotification("discord new", "https://discord.gg/zNzJVgFGae", 20)
+    functions.Other:SendNotification("discord new", "https://discord.gg/hFCsjYRVJ4", 20)
     local MainWindow = library:CreateWindow({
         Name = "Komaru Hub",
         Themeable = {
