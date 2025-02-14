@@ -167,7 +167,7 @@ if game.PlaceId == 8260276694 then
         Callback = function(state)
             if state then
                 local AntiVoidPart = Instance.new("Part")
-                AntiVoidPart.Size = Vector3.new(10000, 20, 10000)
+                AntiVoidPart.Size = Vector3.new(10000, 5, 10000)
                 AntiVoidPart.Position = Vector3.new(156, 0, 31)
                 AntiVoidPart.Material = AntiVoidMaterial
                 AntiVoidPart.CanCollide = true
